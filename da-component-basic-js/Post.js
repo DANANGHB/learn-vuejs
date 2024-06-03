@@ -3,7 +3,7 @@ export default {
   data() {
     return { count: [10,20,30], name: 'danang' }
   },
-  template: `<div class="tab" @click="$emit('update-value')">
-    Posts component {{count[2]}}, my name is {{name}}
+  template: `<div class="tab">
+    <b @click="$emit('update-value')">Posts</b> component {{count[2]}}, my name is {{name}}
   </div>`
 }
