@@ -26,18 +26,14 @@ export default {
   },
   template: `
   <div class="demo">
-    
-    <div v-if="currentTab === 'Posts'">
-
     <button
-    v-for="tab in tabs"
-    :key="tab"
-    :class="['tab-button', { active: currentTab === tab }]"
-    @click="currentTab = tab"
-  >
-  {{tab}}
-  </button>
-    </div>
+      v-for="tab in tabs"
+      :key="tab"
+      :class="['tab-button', { active: currentTab === tab }]"
+      @click="currentTab = tab"
+    >
+      {{ tab }}
+    </button>
     <component :is="currentTab" class="tab" :value="currentTab" @update-value="currentTab = changeTab(currentTab)"></component>
   </div>`
 }
