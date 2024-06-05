@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+  {{modelValue}}
+  <br>
+  total selected {{modelValue.length}}
+  <br>
+  <input v-for="item in items" type="checkbox" v-model="modelValue" :value="item"/>
+</div>
+
+<script>
+  const { createApp } = Vue;
+
+  createApp({
+    data() {
+      return {
+        modelValue: [],
+        items: ['1','2','3','4']
+      }
+    }
+  }).mount('#app')
+</script>
